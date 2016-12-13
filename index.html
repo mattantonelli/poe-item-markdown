@@ -1,0 +1,94 @@
+<html ng-app>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>r/pathofexile Item Markdown Generator</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h3 class="text-center">r/pathofexile Item Markdown Generator</h3>
+      <div class="col-md-5 well">
+        <form>
+          <div class="form-group">
+            <label>Name</label>
+            <input ng-model="name" class="form-control" placeholder="Lightning Coil"></input>
+          </div>
+
+          <div class="form-group">
+            <label>Base</label>
+            <input ng-model="base" class="form-control" placeholder="Desert Brigandine"></input>
+          </div>
+
+          <label>Stats</label>
+          <div class="form-group">
+            <input ng-model="stat1" class="form-control" placeholder="Armour: (509 to 589)"></input>
+          </div>
+          <div class="form-group">
+            <input ng-model="stat2" class="form-control" placeholder="Evasion: (509 to 589)"></input>
+          </div>
+          <div class="form-group">
+            <input ng-model="stat3" class="form-control"></input>
+          </div>
+          <div class="form-group">
+            <input ng-model="stat4" class="form-control"></input>
+          </div>
+
+          <label>Requirements</label>
+
+          <div class="form-group">
+            <input ng-model="requirements" class="form-control" placeholder="Requires Level 60, 96 Str, 96 Dex"></input>
+          </div>
+
+          <label>Mods</label>
+
+          <div class="form-group">
+            <input ng-model="mod1" class="form-control" placeholder="Adds 1 to (20-30) lightning damage to attacks"></input>
+          </div>
+          <div class="form-group">
+            <input ng-model="mod2" class="form-control" placeholder="(90-120)% increased armour and evasion"></input>
+          </div>
+          <div class="form-group">
+            <input ng-model="mod3" class="form-control" placeholder="+(60-80) to maximum life"></input>
+          </div>
+          <div class="form-group">
+            <input ng-model="mod4" class="form-control" placeholder="-60% to lightning resistance"></input>
+          </div>
+          <div class="form-group">
+            <input ng-model="mod5" class="form-control" placeholder="30% of physical damage taken as lightning damage"></input>
+          </div>
+          <div class="form-group">
+            <input ng-model="mod6" class="form-control"></input>
+          </div>
+
+          <label>Description</label>
+
+          <div class="form-group">
+            <input ng-model="description" class="form-control" placeholder="There's nothing like imminent death to galvanize..."></input>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-5 col-md-offset-2">
+        <div class="row">
+          <pre id="markdown">&gt;######{{name}} [](#break) {{base}}
+&gt;&gt;####{{stat1}}
+&gt;&gt;####{{stat2}}
+&gt;&gt;####{{stat3}}
+&gt;&gt;####{{stat4}}
+&gt;&gt;[](#line)
+&gt;&gt;####{{requirements}}
+&gt;&gt;[](#line)
+&gt;&gt;#####{{mod1}}
+&gt;&gt;#####{{mod2}}
+&gt;&gt;#####{{mod3}}
+&gt;&gt;#####{{mod4}}
+&gt;&gt;#####{{mod5}}
+&gt;&gt;#####{{mod6}}
+&gt;&gt;[](#line)
+&gt;&gt;*{{description}}*</pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
