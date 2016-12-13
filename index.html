@@ -1,9 +1,14 @@
-<html ng-app>
+<html ng-app="poe-item-markdown">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+    <script src="/ngclipboard.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>r/pathofexile Item Markdown Generator</title>
+    <script type="text/javascript" charset="utf-8">
+      angular.module('poe-item-markdown', ['ngclipboard']);
+    </script>
   </head>
 
   <body>
@@ -87,6 +92,9 @@
 &gt;&gt;#####{{mod6}}
 &gt;&gt;[](#line)
 &gt;&gt;*{{description}}*</pre>
+        </div>
+        <div class="row">
+          <button class="btn btn-default" ngclipboard data-clipboard-target="#markdown">Click to copy</button>
         </div>
       </div>
     </div>
